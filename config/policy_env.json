@@ -1,0 +1,18 @@
+{
+    "dt": 5e-5,
+    "speed_range": [0.8, 2.4],
+    "power_range": [80.0, 300.0],
+    "t_norm_steps": 81,
+    "nfe": 4,
+    "z_min": -2e-4,
+    "dz": 1e-5,
+    "z_substrate": 0.0,
+    "x_min": -5e-4,
+    "y_min": -5e-4,
+    "dx": 1e-5,
+    "nx": 100,
+    "ny": 100,
+    "thickness_patch_size": 64,
+    "future_lookahead_steps": 5,
+    "future_lookahead_speed": 3.0
+}

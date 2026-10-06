@@ -1,0 +1,22 @@
+{
+    "data": {"val_ratio": 0.1, "seed": 42},
+    "model": {
+        "bottleneck": "continuous",
+        "in_channels": 2,
+        "latent_dim": 10,
+        "base_channels": 64,
+        "ch_mult": [1, 2, 4],
+        "num_res_blocks": 2,
+        "fsq_levels": [5, 4, 4, 3, 3, 3, 2, 2],
+        "fsq_scale": 10.0,
+        "amplitude_levels": 1024,
+        "decoder_base_channels": 32,
+        "decoder_ch_mult": [1, 2, 4],
+        "decoder_num_res_blocks": 1
+    },
+    "optimizer": {"lr": 2e-4, "weight_decay": 5e-5},
+    "loss": {"ic_weight_first_epoch": 1.0, "ic_weight": 1.0},
+    "training": {"epochs": 200, "save_epochs": [100, 150, 200],
+                 "batch_size": 2, "val_batch_size": 16, "num_workers": 8},
+    "wandb": {"project": "meltpool-world-model", "mode": "online"}
+}

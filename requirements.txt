@@ -1,0 +1,8 @@
+torch>=2.4
+accelerate>=1.0
+transformers>=4.40
+numpy
+h5py
+einops
+tqdm
+wandb

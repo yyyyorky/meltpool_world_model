@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+wandb/
+*.h5
+checkpoints/*.pth
+checkpoints/*.pt
+checkpoints/**/*.pth
+checkpoints/**/*.pt
+opt_result*/
+rl_logs/
+results/
+repro_logs/
+INTERNAL.md

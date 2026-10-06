@@ -1,0 +1,30 @@
+{
+    "dt": 5e-5,
+    "t_norm_steps": 81,
+    "speed_range": [0.8, 2.4],
+    "power_range": [80.0, 300.0],
+    "init_speed": 1.8,
+    "init_power": 250,
+    "horizon_steps": 10,
+    "exec_stride": 2,
+    "inner_iters": 10,
+    "inner_lr": 0.5,
+    "grad_clip_norm": 1.0,
+    "plan_detach_interval": 0,
+    "nfe": 2,
+    "objective": {
+        "d_fuse": 5e-5,
+        "d_bond": 2.5e-5,
+        "safe_rel": 0.5,
+        "rel_hard": 0.5,
+        "sigma_lo": 1.5e-5,
+        "sigma_hi": 1.5e-5,
+        "sigma_blend": 1.3e-5,
+        "w_band": 5.0,
+        "w_depth_var": 1.0,
+        "target_depth": 5e-5,
+        "anticipation_aggregator": "mean",
+        "future_lookahead_steps": 1,
+        "future_lookahead_speed": 2.0
+    }
+}

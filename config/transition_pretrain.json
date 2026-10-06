@@ -1,0 +1,18 @@
+{
+    "data": {"val_ratio": 0.1, "seed": 42, "past_horizon": 5},
+    "model": {
+        "z_dim": 10,
+        "cond_dim": 4,
+        "width": 256,
+        "depth": 8,
+        "heads": 8,
+        "mlp_ratio": 4,
+        "patch": [2, 2, 1],
+        "grid": [25, 25, 8],
+        "nfe": 4
+    },
+    "optimizer": {"lr": 2e-4, "weight_decay": 1e-4, "warmup_steps": 500, "grad_clip": 1.0},
+    "training": {"epochs": 1000, "batch_size": 64, "val_batch_size": 64, "num_workers": 8,
+                 "rollout_max": 5, "rollout_warmup_epochs": 5},
+    "wandb": {"project": "meltpool-world-model", "mode": "online"}
+}

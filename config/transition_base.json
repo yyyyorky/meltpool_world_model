@@ -1,0 +1,54 @@
+{
+    "data": {
+        "train_cases": "config/splits/M0_train_360.json",
+        "val_cases": "config/splits/M0_val_40.json",
+        "seed": 42,
+        "past_horizon": 5
+    },
+    "model": {
+        "arch": "dit",
+        "z_dim": 10,
+        "cond_dim": 4,
+        "width": 256,
+        "depth": 8,
+        "heads": 8,
+        "mlp_ratio": 4,
+        "patch": [
+            2,
+            2,
+            1
+        ],
+        "grid": [
+            25,
+            25,
+            8
+        ],
+        "nfe": 4
+    },
+    "optimizer": {
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "warmup_steps": 500,
+        "grad_clip": 1.0
+    },
+    "training": {
+        "epochs": 400,
+        "batch_size": 8,
+        "val_batch_size": 8,
+        "num_workers": 8,
+        "rollout_max": 5,
+        "rollout_warmup_epochs": 3,
+        "val_interval": 1,
+        "rollout_val_steps": 5,
+        "rollout_val_batches": 24
+    },
+    "muwafa": {
+        "weight": 0.01,
+        "autoencoder_config": "config/autoencoder.json",
+        "autoencoder_checkpoint": "checkpoints/best_model_ae_20260614_234059.pth"
+    },
+    "wandb": {
+        "project": "meltpool-world-model",
+        "mode": "online"
+    }
+}

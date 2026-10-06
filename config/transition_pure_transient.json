@@ -1,0 +1,24 @@
+{
+    "data": {
+        "past_horizon": 5
+    },
+    "model": {
+        "z_dim": 10,
+        "cond_dim": 4,
+        "width": 256,
+        "depth": 8,
+        "heads": 8,
+        "mlp_ratio": 4,
+        "patch": [
+            2,
+            2,
+            1
+        ],
+        "grid": [
+            25,
+            25,
+            8
+        ],
+        "nfe": 4
+    }
+}
