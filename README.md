@@ -16,6 +16,7 @@
 </div>
 
 ## Overview
+World models, which learn how environments respond to actions, are emerging as a powerful paradigm for planning through imagined futures, transforming decision-making across games, robotics, and autonomous driving. Bringing this capability to manufacturing could enable process decisions on timescales inaccessible to high-fidelity simulation. Here we introduce a generative world model for localized, highly dynamic laser melt pools that predicts evolution from histories of temperature and phase morphology under candidate actions. Its generative latent dynamics capture the effects of unresolved melt flow, enabling more accurate recursive rollouts than deterministic regressors under transient laser inputs. Because the learned dynamics are differentiable, the model can serve directly as a predictive control plant. Gradients through imagined futures optimize laser schedules that regulate melt-pool depth over previously unseen geometry, path, and initialization. We further distill this optimization into an amortized policy that produces control actions in a single forward pass, providing a proof of concept for real deployment on machines.
 
 This repository contains a discrete generative world model of laser powder bed fusion melt pools, together with two controllers that plan laser power and scan speed through it. An FSQ autoencoder compresses the 3D temperature and phase fields into a discrete latent code, and a flow-matching diffusion transformer advances the latent state under the laser controls.
 
